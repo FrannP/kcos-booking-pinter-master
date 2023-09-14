@@ -47,7 +47,7 @@
     </div>
     <%= yield %>
   </main>
-
+  
   <%= render 'layouts/modal' %>
   <%= render 'layouts/footer' unless @footer_disabled %>
   <%= raw bamboolab_cookies(button: "OK", text: "#{Rails.application.class.parent_name} koristi kolačiće za pružanje boljeg korisničkog iskustva i funkcionalnosti stranice.", more_link: "http://www.aboutcookies.org/", more_text: "Saznaj više") %>

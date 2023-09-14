@@ -11,6 +11,9 @@ html {
 
 body {
   box-sizing: border-box;
+  
+  //grid i te fore
+  display: grid;
 
   &.offset-top {
     margin-top: 4rem;
@@ -21,6 +24,11 @@ body {
   }
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 main {
   min-height: calc(100vh - 70px);
 }
@@ -29,4 +37,22 @@ main {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+h2{
+  color: $pekara-blue;
+  text-align: center;
+}
+
+p{
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  // text-align: center;
+  // justify-content: center;
+  // align-items: center;
+  // justify-items: center;
+  // align-content: center;
+
+  display: grid;
+  text-align: center;
 }

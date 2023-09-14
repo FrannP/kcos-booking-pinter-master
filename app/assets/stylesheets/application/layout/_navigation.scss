@@ -54,6 +54,8 @@
 .nav--desktop {
   display: none;
 
+  background-color: $pekara-blue;
+
   @include breakpoint ($bp--navbar) {
     display: flex;
     justify-content: center;
@@ -144,5 +146,27 @@
     width: 100%;
     top: 4rem;
     left: 0;
+  }
+}
+
+
+
+//nav za ono da te vraca gore do pocetka
+
+.nav-logo{
+  width: 98px;
+  height: 98px;
+  // background-color: red;
+}
+
+.nav-logo-wrapper{
+  background-color: $pekara-blue;
+  width: 108px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  svg{
+    width: 98px;
+    height: 98px;
   }
 }
