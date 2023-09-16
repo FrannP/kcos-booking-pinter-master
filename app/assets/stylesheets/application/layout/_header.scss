@@ -1,22 +1,22 @@
 /* STICKY HEADER */
 
-.sticky-header.sticky-header--down {
-	transform: translateY(-100%);
-	transition: transform 0.3s;
-	background-color: $white--true;
-	padding-top: 1.25rem;
-	padding-bottom: 1.25rem;
-	box-shadow: none;
-}
+// .sticky-header.sticky-header--down {
+// 	transform: translateY(-100%);
+// 	transition: transform 0.3s;
+// 	background-color: $white--true;
+// 	padding-top: 1.25rem;
+// 	padding-bottom: 1.25rem;
+// 	box-shadow: none;
+// }
 
-.sticky-header.sticky-header--up {
-	transform: translateY(0);
-	transition: transform 0.3s;
-	background-color: $white--true;
-	box-shadow: 0 1px 10px 0 rgba(22,22,22,0.1);
-	padding-top: 1.25rem;
-	padding-bottom: 1.25rem;
-}
+// .sticky-header.sticky-header--up {
+// 	transform: translateY(0);
+// 	transition: transform 0.3s;
+// 	background-color: $white--true;
+// 	box-shadow: 0 1px 10px 0 rgba(22,22,22,0.1);
+// 	padding-top: 1.25rem;
+// 	padding-bottom: 1.25rem;
+// }
 
 .sticky-header {
 	position: fixed;
@@ -29,7 +29,7 @@
 
 .header{
 	background-color: $pekara-blue;
-	height: 1024px;
+	height: 100vh;
 	align-content: center;
 	justify-items: center;
 	justify-content: center;
@@ -37,10 +37,20 @@
 
 	display: grid;
 
+	img{
+		padding-bottom: 64px;
+	}
+
 	&__title{
 		color: $white--true;
+		font-size: 96px;
+		font-weight: 400;
 	}
 	&__paragraph{
 		color: $white--true;
+		font-size: 24px;
+		font-weight: 400;
 	}
+
+
 }

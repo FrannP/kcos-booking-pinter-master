@@ -24,6 +24,14 @@ body {
   }
 }
 
+hr{
+  color: $white--true;
+  width: 100%;
+
+}
+
+
+
 a{
   text-decoration: none;
   color: inherit;
@@ -149,3 +157,105 @@ h2{
       justify-content: center;
     }
   
+
+
+//KONTAKT
+
+.contact-section{
+  padding: 60px 244px;
+}
+
+.contact-info{
+  display: flex;
+  gap: 24px;
+
+  &__map{
+    width: 708px;
+    height: 360px; 
+  }
+}
+
+.contact-data{
+
+  &__title{
+    color: $pekara-blue;
+  }
+
+  &__paragraph{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%; 
+  }
+}
+
+
+
+
+
+//NEWS
+
+.news-section{
+  padding: 60px 366px;
+  // display: grid;
+  // grid-template-columns: 708px;
+  justify-content: center;
+
+  &__title{
+    color: $pekara-blue;
+    text-align: center;
+  }
+}
+
+.news{
+  display: flex;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 24px;
+  justify-content: center;
+
+  img{
+    width: 342px;
+    height: 342px; 
+  }
+
+
+}
+
+.news-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title{
+    color: $black;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: start;
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+.more-button{
+  margin-top: 48px;
+  width: 100%;
+  text-align: center;
+  .section__button{
+  color: $white--true;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  background-color: $pekara-blue;
+  padding: 12px 24px;
+
+
+  width: 395px;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase; 
+  }
+}
+
+
+//NAV

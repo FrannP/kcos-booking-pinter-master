@@ -55,14 +55,14 @@
   display: none;
 
   background-color: $pekara-blue;
-
+  width: 342px;
   @include breakpoint ($bp--navbar) {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 100%;
 
-    width: 100%;
+    width: 342px;
     padding: 0 $gutter;
      //box-shadow: 0 1px 10px 0 rgba(22,22,22,0.1);
   }
@@ -99,7 +99,7 @@
 .nav--mobile {
   position: fixed;
   z-index: 1;
-  background-color: $white--true;
+  background-color: $pekara-blue;
   top: 0;
   width: 100%;
   left: 0;
@@ -169,4 +169,56 @@
     width: 98px;
     height: 98px;
   }
+}
+
+.slide-nav{
+  display: flex;
+  flex-direction: column;
+  color: $white--true;
+  width: 342px;
+  height: 100%;
+  background-color: $pekara-blue;
+  align-items: baseline;
+
+  padding: 5vh 0 10vh 0;
+  
+  &__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 24px;
+  }
+
+  &__text--bix{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+  }
+
+  &__text--small{
+    font-size: 1.15vw;
+    font-weight: 400;
+  }
+
+
+  &__text--big{
+    font-size: 1.5vw;
+    font-weight: 400;
+  }
+
+  &__text--x-small{
+    font-size: 1vw;
+    font-weight: 400;
+  }
+
+  hr{
+    margin: 24px 0;
+  }
+}
+
+.nav-container{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
