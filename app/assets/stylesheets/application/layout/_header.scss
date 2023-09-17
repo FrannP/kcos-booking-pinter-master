@@ -36,8 +36,30 @@
 }
 
 .header{
-	background-color: $pekara-blue;
 	height: 100vh;
+	background-color: $pekara-blue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__button{
+		position: absolute;
+		bottom: 24px;
+
+		cursor: pointer;
+		width: 32px;
+		height: 32px; 
+		svg{
+			transform: rotate(270deg);	
+		}
+	}
+}
+
+
+.header-title{
+
+
 	align-content: center;
 	justify-items: center;
 	justify-content: center;

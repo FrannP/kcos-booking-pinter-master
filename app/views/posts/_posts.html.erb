@@ -1,11 +1,19 @@
-<div id="posts">
+<div id="posts" class="post-wrapper">
   <% posts.each do |post| %>
+  <div class="news">
     <%= image_tag post.image_url(:medium) %>
-    <%= link_to post_path(post) do %>
-      <p><%= post.title %></p>
-    <% end %>
-    <%= post.summary %>
-    <%= post_timestamp(post.publish_at) %>
+
+      <div class="news-text">
+        <%= link_to post_path(post) do %>
+          <h2 class="news-text__title"><%= post.title %></h2>
+        <% end %>
+        <p class="news-text__paragraph">
+          <%= post.summary %>
+        </p>
+        <%= post_timestamp(post.publish_at) %>
+      </div>
+  </div>
+
   <% end %>
   <%= paginate posts, remote: true %>
 </div>

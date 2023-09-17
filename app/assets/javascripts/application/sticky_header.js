@@ -39,12 +39,6 @@ $(window).scroll(function() {
     }
 });
 
-// $(window).ready(function () {
-//   $('.nav-button').click(function () {
-//       $('.slide-nav').slideToggle();
-//   });
-// });
-
 $(document).ready(function () {
   $('.nav-button').click(function () {
 
@@ -57,9 +51,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-  var originalPosition = true; // Variable to track the original position
-  
-  // Handle click on the fixed div
+  var originalPosition = true;
+
   $('.nav-button').click(function () {
       if (originalPosition) {
           $(this).animate({ right: '342px' },"300ms", 'easeOutCubic', function () {});
@@ -67,6 +60,22 @@ $(document).ready(function () {
           $(this).animate({ right: '0px' },"300ms", 'easeOutCubic', function () {});
       }
       
-      originalPosition = !originalPosition; // Toggle the position
+      originalPosition = !originalPosition; 
+  });
+});
+
+
+//sticky home button
+
+$(document).ready(function() {
+  var navLogo = $(".nav-logo-wrapper");
+  var sticky = navLogo.offset().top;
+
+  $(window).scroll(function() {
+      if ($(window).scrollTop() > sticky) {
+          navLogo.addClass("nav-logo-wrapper--sticky");
+      } else {
+          navLogo.removeClass("nav-logo-wrapper--sticky");
+      }
   });
 });

@@ -162,3 +162,35 @@
 
   @return 0 $primary-offset $blur $color;
 }
+
+
+
+//Fran Mixins
+/*------------------------------------*\
+** TITLES
+\*------------------------------------*/
+
+@mixin section-title-medium {
+    color: $pekara-blue;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+}
+
+@mixin section-title-big {
+  color: $pekara-blue;
+  font-size: 64px;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+
+@mixin subtitle {
+  color: $black;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: start;
+  font-family: "Raleway", sans-serif;
+}

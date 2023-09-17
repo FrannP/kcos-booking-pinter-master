@@ -184,7 +184,6 @@
 .nav-logo{
   width: 98px;
   height: 98px;
-  // background-color: red;
 }
 
 .nav-logo-wrapper{
@@ -196,6 +195,11 @@
   svg{
     width: 98px;
     height: 98px;
+  }
+
+  &--sticky{
+    position: fixed;
+    top: 0;
   }
 }
 
