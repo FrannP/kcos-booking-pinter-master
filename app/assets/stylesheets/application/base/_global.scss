@@ -277,9 +277,55 @@ h2{
 
 //POSTS (NEWS)
 
-.post-wrapper{
+.posts-wrapper{
   display: grid;
   grid-row-gap: 48px;
+}
+
+.post{
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  grid-row-gap: 24px;
+
+
+  grid-template-columns: repeat(12, calc(100% / 12));
+
+  &__article{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6/10;
+    grid-row-gap: 16px;
+
+    h5, h4, h2, p {
+      text-align: start;
+    }
+  }
+}
+
+.post-header{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 6/10;
+  grid-row-gap: 16px;
+
+  img{
+    width: 100%;
+    grid-column: span 6/10;
+  }
+
+
+  &__title{
+    grid-column: span 6/10;
+    // h1{
+    //   @include subtitle-big
+    // }
+  }
 }
 
 

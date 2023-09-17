@@ -194,3 +194,12 @@
   text-align: start;
   font-family: "Raleway", sans-serif;
 }
+
+@mixin subtitle-big {
+  color: $black;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: start;
+  font-family: "Raleway", sans-serif;
+}
