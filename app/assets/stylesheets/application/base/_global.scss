@@ -329,5 +329,37 @@ h2{
 }
 
 
-//LEGALL
+//LEGAL
 
+.legal{
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  grid-row-gap: 24px;
+
+
+  grid-template-columns: repeat(12, calc(100% / 12));
+
+  &__article{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6/10;
+    grid-row-gap: 16px;
+
+    h5, h4, h2, p, h1 {
+      text-align: start;
+    }
+  }
+}
+
+.legal__title{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 6/10;
+  grid-row-gap: 16px;
+}
