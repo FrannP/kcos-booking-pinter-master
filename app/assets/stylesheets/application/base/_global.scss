@@ -312,16 +312,13 @@ h2{
   grid-row-gap: 24px;
 
   &__title{
-    color: $pekara-blue;
-    font-size: 64px;
-    font-weight: 400;
-    text-align: center;
+    @include section-title-medium
+  }
 
     &--big{
       @include section-title-big
     }
   }
-}
 
 .news{
   display: grid;
@@ -599,4 +596,42 @@ display: grid;
       width: 24px;
     }
   }
+}
+
+
+//ABOUT
+
+.about{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  grid-row-gap: 24px;
+  grid-template-columns: repeat(12, calc(100% / 12));
+
+  &__title{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6/10;
+    grid-row-gap: 16px;
+
+    @include section-title-medium
+  }
+
+  &__text{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6/10;
+    grid-row-gap: 16px;
+  }
+}
+
+.more-button{
+  cursor: pointer;
+  color: $pekara-blue;
+  text-align: left;
+
+  margin: 0;
 }
