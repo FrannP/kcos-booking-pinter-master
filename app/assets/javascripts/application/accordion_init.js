@@ -33,6 +33,7 @@ $(function () {
   function toggleBody() {
       var $currentItem = $(this).closest('.accordion__item');
       var $line = $currentItem.find('.faq-underline')
+      var $expander = $currentItem.find('.question__button')
       
       if (!$currentItem.hasClass('active')) {
           $('.accordion__item').removeClass('active');
@@ -40,11 +41,16 @@ $(function () {
 
           $line.addClass('faq-underline--active')
 
+          $expander.html("-");
+
           $body.slideUp();
           $currentItem.find('.js-accordion__body').slideDown();
       } else {
           $currentItem.removeClass('active');
           $currentItem.find('.js-accordion__body').slideUp();
+
+          $expander.html("+");
+
 
           $line.removeClass('faq-underline--active');
       }

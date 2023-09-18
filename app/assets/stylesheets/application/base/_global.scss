@@ -67,6 +67,9 @@ h2{
 
 // }
 
+
+
+//SPACES
 .space-section{
   padding: 60px 366px;
 
@@ -157,6 +160,94 @@ h2{
       justify-content: center;
     }
   
+
+//SPACES (DETAILED)
+
+.space-container{
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  grid-row-gap: 24px;
+
+
+  grid-template-columns: repeat(12, calc(100% / 12));
+
+  .space-container-title{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6/10;
+    grid-row-gap: 16px;
+
+    margin: 0;
+
+    @include section-title-big
+  }
+
+  .space-description{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6/10;
+    grid-row-gap: 16px;
+
+    p{
+      margin: 0;
+    }
+  }
+
+  .info-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 24px;
+    padding: 24px;
+    &__data{
+      display: grid;
+      justify-content: center;
+
+      border: 1px solid $pekara-blue; 
+      p{
+        margin: 0;
+      }
+    }
+  }
+
+  .info{
+    display: flex;
+    flex-direction: column;
+    padding: 24px; 
+    &__number{
+      @include section-title-medium 
+    }
+    &__type{
+      text-align: center;
+
+      color: $pekara-blue;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+
+
+.space-container__button{
+  color: $white--true;
+  text-align: center;
+  background-color: $pekara-blue;
+  padding: 12px 24px;
+
+
+  width: 100%;
+
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase; 
+
+  grid-column: span 2/8;
+}
 
 
 //KONTAKT
@@ -385,6 +476,8 @@ h2{
     align-items: center;
     grid-column: span 6/10;
     grid-row-gap: 16px;
+
+    @include section-title-big
   }
 
   &__questions{
@@ -430,5 +523,74 @@ h2{
 
   &--active{
     color: $pekara-blue;
+  }
+}
+
+//DOCUMENTS
+
+.documents{
+display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(12, calc(100% / 12));
+
+  &__title{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6/10;
+    grid-row-gap: 16px;
+
+        @include section-title-big
+  }
+}
+
+
+
+.document{
+
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0000001a;;
+
+  justify-content: center;
+  height: 48px;
+  grid-column: span 6/10;
+
+  transition: ease-in-out 200ms;
+
+  &:hover{
+    background: #0077ae33;
+  }
+
+  &__text{
+    margin: 0px 12px;
+
+    @include subtitle 
+  }
+
+  &__button{
+    margin: 6px 12px;
+
+    cursor: pointer;
+    background-color: $pekara-blue;
+
+    display: flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    svg{
+      background-color: $pekara-blue;
+      height: 24px;
+      width: 24px;
+    }
   }
 }
