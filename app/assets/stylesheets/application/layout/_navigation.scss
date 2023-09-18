@@ -9,6 +9,7 @@
 }
 
 .nav-button{
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,6 +81,7 @@
 \*------------------------------------*/
 
 .nav--desktop {
+  z-index: 999;
   display: none;
 
   background-color: $pekara-blue;
@@ -187,6 +189,7 @@
 }
 
 .nav-logo-wrapper{
+  z-index: 9999;
   background-color: $pekara-blue;
   width: 108px;
   padding: 10px;
@@ -204,6 +207,7 @@
 }
 
 .slide-nav{
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   color: $white--true;

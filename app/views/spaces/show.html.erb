@@ -2,13 +2,20 @@
 <% content_for :description, seo_description((@space.description.strip_tags.truncate(120, separator: ' '))) %>
 <% content_for :title, "Stara Pekara - " + @space.name %>
 
-<div>
-  <% unless @space.space_images.blank? %>
+
+
+  <div class="owl-carousel owl-theme carousel">
+    <% unless @space.space_images.blank? %>
     <% @space.space_images.each do |image| %>
-      <%= link_to image_tag(image.image), image_url(image.image), data: {lightbox: 'space', title: @space.name} %>
+    <div class="carousel__item" >
+      <div style="height: 300px;">      
+        <%= link_to image_tag(image.image), image_url(image.image), data: {lightbox: 'space', title: @space.name} %>
+      </div>
+    </div>
     <% end %>
   <% end %>
 </div>
+
 
 
 <div class="space-container">
@@ -62,3 +69,23 @@
     <% end %>
   </div>
 </div>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:144,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:1,
+            stagePadding: 500
+        }
+    }
+})
+</script>

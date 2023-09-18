@@ -291,8 +291,14 @@ h2{
   }
 }
 
+.carousel{
+  max-width: 100vw;
 
-
+  &__item{
+    width: 952px;
+    height: 480px;
+  }
+}
 
 
 //NEWS
