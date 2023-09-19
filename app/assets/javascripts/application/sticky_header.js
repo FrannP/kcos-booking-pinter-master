@@ -79,3 +79,28 @@ $(document).ready(function() {
       }
   });
 });
+
+
+
+
+
+//HOME TO TOP
+
+
+$(document).ready(function() {
+  var scrollToTopBtn = $(".nav-logo-button");
+  var rootElement = $("html, body");
+
+  scrollToTopBtn.click(function() {
+    rootElement.animate({ scrollTop: 0 }, "slow");
+  });
+});
+
+
+//HEADER DOWN
+
+  $(document).ready(function() {
+    $(".header__button").click(function() {
+        $("#to-main")[0].scrollIntoView({ behavior: 'smooth' });
+    });
+});

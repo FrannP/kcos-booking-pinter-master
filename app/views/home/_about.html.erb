@@ -14,8 +14,8 @@
 
         <ul class="accordion">
             <li class="accordion__item">
-                <div class="question">
-                    <p class="js-accordion__head more-button">
+                <div class="read-more">
+                    <p class="js-accordion__head read-more__button">
                         Pročitaj više
                     </p>
                 </div>
@@ -27,8 +27,37 @@
     </article>
 
     <div class="about-gallery">
+
         <!-- <%= render 'home/gallery' if @page_content.gallery_images.any? %> -->
 
+
+
+        <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="BUH">
+            <div class="about-gallery__image">
+                <%= image_tag("dummy/photo_1.jpg") %>
+            </div>
+        </a>
+
+
+
+        <!-- <div class="about-gallery__image">
+            <%= image_tag("dummy/photo_1.jpg") %>
+        </div> -->
+
+        <div class="about-gallery__image">
+            <%= image_tag("dummy/photo_1.jpg") %>
+        </div>
+
+        <div class="about-gallery__image">
+            <%= image_tag("dummy/photo_1.jpg") %>
+        </div>
+
+        <div class="about-gallery__image about-gallery__image--blue-filter">
+            <%= image_tag("dummy/photo_1.jpg") %>
+            <h1 class="image-number">
+                +8
+            </p>
+        </div>
+        
     </div>
 </div>
-

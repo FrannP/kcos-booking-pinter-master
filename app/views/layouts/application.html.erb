@@ -38,8 +38,8 @@
   <%= render 'layouts/header' if @show_header %>
 
 
-  <main role="main" class="main js-main">
-    <div class="nav-logo-wrapper">
+  <main id="to-main" role="main" class="main js-main">
+    <div class="nav-logo-wrapper nav-logo-button">
     <%= link_to inline_svg('logo.svg'), root_path(anchor: 'home'), class: 'nav-logo' %>
     </div>
     <div id="notifications">
