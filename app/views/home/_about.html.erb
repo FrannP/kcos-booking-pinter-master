@@ -30,34 +30,25 @@
 
         <!-- <%= render 'home/gallery' if @page_content.gallery_images.any? %> -->
 
+        <div class="about-gallery__image">
+            <%= image_tag("dummy/photo_1.jpg") %>
+        </div> 
 
+        <div class="about-gallery__image">
+            <%= image_tag("dummy/photo_1.jpg") %>
+        </div>
 
+        <div class="about-gallery__image">
+            <%= image_tag("dummy/photo_1.jpg") %>
+        </div>
         <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="BUH">
-            <div class="about-gallery__image">
+            <div class="about-gallery__image about-gallery__image--blue-filter">
                 <%= image_tag("dummy/photo_1.jpg") %>
+                <h1 class="image-number">
+                    +8
+                </p>
             </div>
         </a>
 
-
-
-        <!-- <div class="about-gallery__image">
-            <%= image_tag("dummy/photo_1.jpg") %>
-        </div> -->
-
-        <div class="about-gallery__image">
-            <%= image_tag("dummy/photo_1.jpg") %>
-        </div>
-
-        <div class="about-gallery__image">
-            <%= image_tag("dummy/photo_1.jpg") %>
-        </div>
-
-        <div class="about-gallery__image about-gallery__image--blue-filter">
-            <%= image_tag("dummy/photo_1.jpg") %>
-            <h1 class="image-number">
-                +8
-            </p>
-        </div>
-        
     </div>
 </div>
