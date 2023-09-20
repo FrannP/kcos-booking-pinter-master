@@ -71,7 +71,7 @@ h2{
 
 //SPACES
 .space-section{
-  padding: 60px 366px;
+  padding: 60px 0;
 
   display: grid;
   grid-template-columns: 708px;
@@ -696,7 +696,10 @@ display: grid;
   transform: translate(-50%, -50%);
 }
 
-
-
-
-
+.gallery{
+  &__image{
+    &--invisible{
+      display: none;
+    }
+  }
+}

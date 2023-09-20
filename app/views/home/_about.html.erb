@@ -1,4 +1,4 @@
-<div class="about">
+<div id="o-nama" class="about">
     <h2 class="about__title"><%= t('pages_nav.about') %></h2>
     <article class="about__text">
         <!-- <%= @page_content.about_project.html_safe %>  -->
@@ -30,7 +30,7 @@
 
         <!-- <%= render 'home/gallery' if @page_content.gallery_images.any? %> -->
 
-        <div class="about-gallery__image">
+ <div class="about-gallery__image">
             <%= image_tag("dummy/photo_1.jpg") %>
         </div> 
 
@@ -41,14 +41,167 @@
         <div class="about-gallery__image">
             <%= image_tag("dummy/photo_1.jpg") %>
         </div>
-        <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="BUH">
+               <!-- <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="BUH">
             <div class="about-gallery__image about-gallery__image--blue-filter">
                 <%= image_tag("dummy/photo_1.jpg") %>
                 <h1 class="image-number">
                     +8
                 </p>
             </div>
-        </a>
+        </a> -->
 
+
+
+
+
+        <!-- LIGHT  -->
+            <!-- <div style="display: none;">
+                <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="Image 2">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                        <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+
+                <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="Image 3">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                        <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+                
+                <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="Image 2">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                        <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+
+                <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="Image 3">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                        <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+
+                <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="Image 2">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                        <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+
+                <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="Image 3">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                        <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+
+                <a href="<%= asset_url("dummy/photo_1.jpg") %>" data-lightbox="pandas" data-title="Image 2">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                        <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+            </div> -->
+            
+
+
+            <div id="myGallery" class="gallery">
+                <a href="<%= asset_url("dummy/photo_1.jpg") %>">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                        <%= image_tag("dummy/photo_1.jpg") %>
+                        <h1 class="image-number">
+                            +8
+                        </p>
+                    </div>
+                </a>
+
+                <a class="gallery__image--invisible" href="<%= asset_url("dummy/photo_1.jpg") %>">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                        <%= image_tag("dummy/photo_1.jpg") %>
+
+                    </div>
+                </a>
+
+                <a class="gallery__image--invisible"  href="<%= asset_url("dummy/photo_1.jpg") %>">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                            <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+
+                <a class="gallery__image--invisible"  href="<%= asset_url("dummy/photo_1.jpg") %>">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                            <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+
+                <a class="gallery__image--invisible"  href="<%= asset_url("dummy/photo_1.jpg") %>">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                            <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+
+                <a class="gallery__image--invisible"  href="<%= asset_url("dummy/photo_1.jpg") %>">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                            <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+
+                <a class="gallery__image--invisible"  href="<%= asset_url("dummy/photo_1.jpg") %>">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                            <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+
+                <a class="gallery__image--invisible"  href="<%= asset_url("dummy/photo_1.jpg") %>">
+                    <div class="about-gallery__image about-gallery__image--blue-filter">
+                            <%= image_tag("dummy/photo_1.jpg") %>
+                    </div>
+                </a>
+            </div>
+              
+        </div>
     </div>
 </div>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const gallery = document.getElementById('myGallery');
+    if (gallery) {
+        lightGallery(gallery, {
+            closable: true,
+            download:false,
+
+            animateThumb: false,
+            zoomFromOrigin: false,
+            allowMediaOverlap: true,
+            toggleThumb: true,
+        });
+    }
+    });
+</script>
+
+<style>
+.lg-toolbar .lg-close::after {
+  content: 'X';
+  font-family: "Raleway", sans-serif;
+  color: #0077AE;
+  font-weight: 1000;
+}
+
+.lg-next::before {
+  content: '>';
+  font-family: "Raleway", sans-serif;
+  color: #0077AE;
+  font-weight: 1000;
+}
+
+.lg-prev::before {
+  content: '<';
+  font-family: "Raleway", sans-serif;
+  color: #0077AE;
+  font-weight: 1000;
+}
+
+.lg-prev::after {
+display: none;
+}
+</style>

@@ -26,6 +26,12 @@
   //   right: 342px;
   // }
 
+  @include max-breakpoint($name){
+    @media only screen and (max-width:$name) {
+      @content;
+    }
+  }
+
   &__svg{
 
     transition: transform 0.3s;
@@ -189,7 +195,7 @@
 }
 
 .nav-logo-wrapper{
-  z-index: 9999;
+  z-index: 250;
   background-color: $pekara-blue;
   width: 108px;
   padding: 10px;
