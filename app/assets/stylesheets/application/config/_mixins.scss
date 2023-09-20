@@ -203,3 +203,22 @@
   text-align: start;
   font-family: "Raleway", sans-serif;
 }
+
+/*------------------------------------*\
+** TEXTS & PARAGRAPHS
+\*------------------------------------*/
+
+
+@mixin paragraph-normal{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */ 
+}
+
+@mixin paragraph-big{
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}

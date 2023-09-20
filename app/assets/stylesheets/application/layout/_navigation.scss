@@ -26,10 +26,8 @@
   //   right: 342px;
   // }
 
-  @include max-breakpoint($name){
-    @media only screen and (max-width:$name) {
-      @content;
-    }
+  @include max-breakpoint($large){
+    display: none;
   }
 
   &__svg{
@@ -92,6 +90,8 @@
 
   background-color: $pekara-blue;
   width: 342px;
+
+  
   @include breakpoint ($bp--navbar) {
     display: flex;
     justify-content: center;
@@ -100,6 +100,8 @@
 
     width: 342px;
     padding: 0 $gutter;
+    padding-top: 120px;
+    padding-bottom: 240px;
      //box-shadow: 0 1px 10px 0 rgba(22,22,22,0.1);
   }
 
@@ -222,7 +224,7 @@
   background-color: $pekara-blue;
   align-items: baseline;
 
-  padding: 5vh 0 10vh 0;
+  // padding: 5vh 0 10vh 0;
 
   &__section{
     display: flex;
@@ -231,7 +233,7 @@
     gap: 24px;
   }
 
-  &__text--bix{
+  &__text--big{
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -239,18 +241,18 @@
   }
 
   &__text--small{
-    font-size: 1.15vw;
+    font-size: 18px;
     font-weight: 400;
   }
 
 
   &__text--big{
-    font-size: 1.5vw;
+    font-size: 24px;
     font-weight: 400;
   }
 
   &__text--x-small{
-    font-size: 1vw;
+    font-size: 14px;
     font-weight: 400;
   }
 
