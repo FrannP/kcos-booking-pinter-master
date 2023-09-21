@@ -267,6 +267,8 @@ h2{
   &__title{
     @include section-title-medium
   }
+
+  padding: 60px 0;
 }
 
 .contact-info{
@@ -313,10 +315,10 @@ h2{
 //NEWS
 
 .news-section{
-  padding: 60px 366px;
+  padding: 60px 0px;
   // display: grid;
   // grid-template-columns: 708px;
-  justify-content: center;
+  // justify-content: center;
   display: grid;
   grid-row-gap: 24px;
 
@@ -324,21 +326,25 @@ h2{
     @include section-title-medium
   }
 
-    &--big{
-      @include section-title-big
-    }
+  }
+
+  .news-section__title--big{
+      @include section-title-big;
   }
 
 .news{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, calc(100% / 12));
   grid-column-gap: 24px;
   justify-content: center;
 
   img{
+    // width: 342px;
     width: 100%;
-    height: 342px;
-    grid-column: span 3/5;
+    height: 100%;
+    grid-column: span 3/7;
+    justify-self: center;
   }
 
 
@@ -439,6 +445,7 @@ h2{
 //LEGAL
 
 .legal{
+  padding: 60px 0;
   display: grid;
 
   justify-content: center;
@@ -456,9 +463,15 @@ h2{
     align-items: center;
     grid-column: span 6/10;
     grid-row-gap: 16px;
+    @include paragraph-normal;
 
     h5, h4, h2, p, h1 {
       text-align: start;
+    }
+
+    h2{
+      @include subtitle;
+      color: $pekara-blue
     }
   }
 }
@@ -469,12 +482,17 @@ h2{
   align-items: center;
   grid-column: span 6/10;
   grid-row-gap: 16px;
+
+  @include subtitle-big
 }
+
+
 
 
 //FAQS
 
 .faq{
+  padding: 60px 0;
   display: grid;
 
   justify-content: center;
@@ -502,6 +520,8 @@ h2{
     align-items: center;
     grid-column: span 6/10;
     grid-row-gap: 16px;
+    padding: 60px 0;
+
   }
 }
 
@@ -511,7 +531,6 @@ h2{
   grid-template-rows: 1fr 16px;
   justify-content: center;
   align-items: center;
-
 
   &__title{
     @include subtitle
@@ -532,6 +551,10 @@ h2{
     height: 36px;
   }
 
+  p{
+    @include paragraph-normal
+  }
+
 
 }
 
@@ -545,6 +568,7 @@ h2{
 //DOCUMENTS
 
 .documents{
+  padding: 60px 0;
 display: grid;
   justify-content: center;
   align-items: center;
@@ -558,14 +582,15 @@ display: grid;
     grid-column: span 6/10;
     grid-row-gap: 16px;
 
-        @include section-title-big
+    @include section-title-big;
+
+    padding-bottom: 120px;
   }
 }
 
 
 
 .document{
-
 
   width: 100%;
   display: grid;
@@ -577,7 +602,7 @@ display: grid;
 
   justify-content: center;
   height: 48px;
-  grid-column: span 6/10;
+  grid-column: span 8/11;
 
   transition: ease-in-out 200ms;
 
@@ -615,6 +640,7 @@ display: grid;
 //ABOUT
 
 .about{
+  padding: 60px 0;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -670,14 +696,18 @@ display: grid;
   grid-column-gap: 24px;
 
   &__image{
-    width: 100%;
-    height: 290px;
-    position: relative;
-    display: inline-block;
+width: 100%;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+
+
+  grid-template-rows: 1fr 1fr;
+  display: grid;
 
     img{
       width: 100%;
-      height: 100%;
+      height: 200%;
     }
 
     &--blue-filter::before{
