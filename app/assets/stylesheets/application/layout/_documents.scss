@@ -1,0 +1,72 @@
+
+//DOCUMENTS
+
+.documents{
+    padding: 60px 0;
+  display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(12, calc(100% / 12));
+  
+    &__title{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-column: span 6/10;
+      grid-row-gap: 16px;
+  
+      @include section-title-big;
+  
+      padding-bottom: 120px;
+    }
+  }
+  
+  
+  
+  .document{
+  
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: #0000001a;;
+  
+    justify-content: center;
+    height: 48px;
+    grid-column: span 8/11;
+  
+    transition: ease-in-out 200ms;
+  
+    &:hover{
+      background: #0077ae33;
+    }
+  
+    &__text{
+      margin: 0px 12px;
+  
+      @include subtitle
+    }
+  
+    &__button{
+      margin: 6px 12px;
+  
+      cursor: pointer;
+      background-color: $pekara-blue;
+  
+      display: flex;
+      padding: 6px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  
+      svg{
+        background-color: $pekara-blue;
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+  

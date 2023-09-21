@@ -1,0 +1,44 @@
+
+//LEGAL
+
+.legal{
+    padding: 60px 0;
+    display: grid;
+  
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  
+    grid-row-gap: 24px;
+  
+  
+    grid-template-columns: repeat(12, calc(100% / 12));
+  
+    &__article{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-column: span 6/10;
+      grid-row-gap: 16px;
+      @include paragraph-normal;
+  
+      h5, h4, h2, p, h1 {
+        text-align: start;
+      }
+  
+      h2{
+        @include subtitle;
+        color: $pekara-blue
+      }
+    }
+  }
+  
+  .legal__title{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6/10;
+    grid-row-gap: 16px;
+  
+    @include subtitle-big
+  }

@@ -1,0 +1,130 @@
+
+//NEWS
+
+.news-section{
+    padding: 60px 0px;
+    // display: grid;
+    // grid-template-columns: 708px;
+    // justify-content: center;
+    display: grid;
+    grid-row-gap: 24px;
+  
+    &__title{
+      @include section-title-medium
+    }
+  
+    }
+  
+    .news-section__title--big{
+        @include section-title-big;
+    }
+  
+  .news{
+    display: grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(12, calc(100% / 12));
+    grid-column-gap: 24px;
+    justify-content: center;
+  
+    img{
+      // width: 342px;
+      width: 100%;
+      height: 100%;
+      grid-column: span 3/7;
+      justify-self: center;
+    }
+  
+  
+  }
+  
+  .news-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: span 3;
+  
+    &__title{
+      @include subtitle
+    }
+  
+    &__paragraph{
+      @include paragraph-normal
+    }
+  }
+  
+  .more-button{
+    margin-top: 48px;
+    width: 100%;
+    text-align: center;
+    .section__button{
+    color: $white--true;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    background-color: $pekara-blue;
+    padding: 12px 24px;
+  
+  
+    width: 395px;
+  
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    }
+  }
+  
+  
+  //POSTS (NEWS)
+  
+  .posts-wrapper{
+    display: grid;
+    grid-row-gap: 48px;
+  }
+  
+  .post{
+    display: grid;
+  
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  
+    grid-row-gap: 24px;
+  
+  
+    grid-template-columns: repeat(12, calc(100% / 12));
+  
+    &__article{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-column: span 6/10;
+      grid-row-gap: 16px;
+  
+      h5, h4, h2, p {
+        text-align: start;
+      }
+    }
+  }
+  
+  .post-header{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6/10;
+    grid-row-gap: 16px;
+  
+    img{
+      width: 100%;
+      grid-column: span 6/10;
+    }
+  
+  
+    &__title{
+      grid-column: span 6/10;
+      // h1{
+      //   @include subtitle-big
+      // }
+    }
+  }
+  
