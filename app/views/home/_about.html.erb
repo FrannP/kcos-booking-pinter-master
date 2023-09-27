@@ -26,11 +26,11 @@
 
     </article>
 
-    <div class="about-gallery">
+    <div id="myGallery"  class="about-gallery">
 
         <!-- <%= render 'home/gallery' if @page_content.gallery_images.any? %> -->
 
- <div class="about-gallery__image">
+        <!-- <div class="about-gallery__image">
             <%= image_tag("dummy/trg.jpg") %>
         </div> 
 
@@ -40,16 +40,62 @@
 
         <div class="about-gallery__image">
             <%= image_tag("dummy/trg.jpg") %>
-        </div>
+        </div> -->
 
+            <a href="<%= asset_url("dummy/trg.jpg") %>">
+                <div class="about-gallery__image">
+                    <%= image_tag("dummy/trg.jpg") %>
+                </div>
+            </a>
+
+            <a href="<%= asset_url("dummy/trg.jpg") %>">
+                <div class="about-gallery__image">
+                    <%= image_tag("dummy/trg.jpg") %>
+                </div>
+            </a>
+
+            <a href="<%= asset_url("dummy/trg.jpg") %>">
+                <div class="about-gallery__image">
+                    <%= image_tag("dummy/trg.jpg") %>
+                </div>
+            </a>
+
+
+            
+
+            <a style="display: none;"  href="<%= asset_url("dummy/trg.jpg") %>">
+                <div class="about-gallery__image">
+                    <%= image_tag("dummy/trg.jpg") %>
+                </div>
+            </a>
+
+            <a style="display: none;"  href="<%= asset_url("dummy/trg.jpg") %>">
+                <div class="about-gallery__image">
+                    <%= image_tag("dummy/trg.jpg") %>
+                </div>
+            </a>
+
+            <a style="display: none;"  href="<%= asset_url("dummy/trg.jpg") %>">
+                <div class="about-gallery__image">
+                    <%= image_tag("dummy/trg.jpg") %>
+                </div>
+            </a>
+
+            <a style="display: none;"  href="<%= asset_url("dummy/trg.jpg") %>">
+                <div class="about-gallery__image">
+                    <%= image_tag("dummy/trg.jpg") %>
+                </div>
+            </a>
 
             <div id="myGallery" class="gallery">
+                
+
                 <a href="<%= asset_url("dummy/trg.jpg") %>">
                     <div class="about-gallery__image about-gallery__image--blue-filter">
                         <%= image_tag("dummy/trg.jpg") %>
                         <h1 class="image-number">
                             +8
-                        </p>
+                        </h1>
                     </div>
                 </a>
 

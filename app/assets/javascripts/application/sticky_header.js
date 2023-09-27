@@ -49,6 +49,18 @@ $(document).ready(function () {
   });
 });
 
+
+//CLOSES NAV ON link click
+$(document).ready(function () {
+  $('.slide-nav__link').click(function () {
+
+      $('.sticky-header').toggleClass('sticky-header--active');
+      // $('.nav-button').toggleClass('nav-button--active')
+      $('.nav-button__svg').toggleClass('nav-button__svg--active')
+
+  });
+});
+
 $(document).ready(function () {
 
   var originalPosition = true;
@@ -61,6 +73,27 @@ $(document).ready(function () {
       }
       
       originalPosition = !originalPosition; 
+  });
+});
+
+
+$(document).ready(function() {
+  // Select the arrow element by its ID
+  var $navButton = $(".nav-button");
+
+  // Select the button by its ID
+  var $link = $("#slide-nav__link");
+
+  // Add a click event handler to the button
+  $link.click(function() {
+    // Toggle the arrow's position
+    if ($navButton.css("right") === "0px") {
+      // Move the arrow off-screen
+      $navButton.css("right", "-50px");
+    } else {
+      // Move the arrow back on-screen
+      $navButton.css("right", "0");
+    }
   });
 });
 
