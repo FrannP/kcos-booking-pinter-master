@@ -98,15 +98,19 @@
     justify-items: center;
     grid-row-gap: 24px;
     grid-template-columns: repeat(12, calc(100% / 12));
+
     padding-top: 120px;
-    .space-container__title {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        grid-column: span 6/10;
-        grid-row-gap: 16px;
-        margin: 0;
-        @include section-title-big
+  
+    .space-container__title{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-column: span 6/10;
+      grid-row-gap: 16px;
+  
+      margin: 0;
+  
+      @include section-title-big
     }
     .space-description {
         display: grid;
@@ -153,9 +157,13 @@
     text-align: center;
     background-color: $pekara-blue;
     padding: 12px 24px;
+  
+  
     width: 75%;
+  
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
+  
     grid-column: span 4/9;
-}
+  }

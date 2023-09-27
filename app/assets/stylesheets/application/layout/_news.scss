@@ -2,7 +2,7 @@
 //NEWS
 
 .news-section{
-    padding: 60px 0 0 0px;
+    padding: 60px 0px;
     // display: grid;
     // grid-template-columns: 708px;
     // justify-content: center;
@@ -17,8 +17,6 @@
   
     .news-section__title--big{
         @include section-title-big;
-        padding-bottom: 120px;
-        margin: 0;
     }
   
   .news{
@@ -50,8 +48,7 @@
     }
   
     &__paragraph{
-      @include paragraph-normal;
-      margin:0;
+      @include paragraph-normal
     }
   }
   
