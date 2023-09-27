@@ -2,6 +2,11 @@
 ** GLOBAL
 \*------------------------------------*/
 
+@font-face {
+  font-family: 'Source Sans Pro', sans-serif;
+  src: url(app/assets/fonts/SourceSansPro-Regular.otf);
+}
+
 html {
   font-family: $base-font-family;
   line-height: $base-line-height;
@@ -59,7 +64,9 @@ h1{
   margin: 0;
 }
 
-
+p{
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
 
 
