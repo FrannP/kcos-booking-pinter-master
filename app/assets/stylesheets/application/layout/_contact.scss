@@ -27,12 +27,22 @@
   
   .contact-data-container{
     grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   
   }
   
   .contact-data{
-    &__title{
+    &__title{margin-bottom: 0;
+
       color: $pekara-blue;
+      font-family: 'Source Sans Pro', sans-serif;
+
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%; /* 28.8px */ 
     }
   
     &__paragraph{
