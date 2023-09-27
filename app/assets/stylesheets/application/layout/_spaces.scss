@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 //SPACES
 .space-section{
@@ -112,6 +113,107 @@
     grid-row-gap: 24px;
   
   
+=======
+//SPACES
+.space-section {
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 708px;
+    justify-content: center;
+    &__title {
+        @include section-title-medium
+    }
+    &__text {
+        text-align: center;
+        // grid-column: 1 / 3;
+        // grid-row: auto;
+        font-family: 'Source Sans Pro', sans-serif;
+        src: url('app/assets/fonts/SourceSansPro-Regular.otf');
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 160%;
+        /* 28.8px */
+    }
+}
+
+.space {
+    position: relative;
+    color: $white--true;
+    grid-column: span 1;
+    display: grid;
+    img {
+        width: 342px;
+        height: 342px;
+        // filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+    }
+    &__image {
+        position: relative;
+        display: inline-block;
+        width: 342px;
+        height: 342px;
+    }
+    &__image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0077ae80;
+    }
+}
+
+.space-text__title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: start;
+    font-family: "Raleway", sans-serif;
+}
+
+.space-text__title-letter {
+    text-align: center;
+    font-size: 96px;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.space-text__paragraph {
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    @include paragraph-big
+}
+
+.space-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 24px;
+    grid-column-gap: 24px;
+    place-items: center;
+    justify-content: center;
+}
+
+//SPACES (DETAILED)
+.space-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 24px;
+>>>>>>> 5101baeef8c9c4b1c2a70fdcd8b14fd12e96e90a
     grid-template-columns: repeat(12, calc(100% / 12));
 
     padding-top: 120px;
@@ -127,6 +229,7 @@
   
       @include section-title-big
     }
+<<<<<<< HEAD
   
     .space-description{
       display: grid;
@@ -175,6 +278,49 @@
   
   
   .space-container__button{
+=======
+    .space-description {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-column: span 6/10;
+        grid-row-gap: 16px;
+        p {
+            margin: 0;
+        }
+    }
+    .info-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 24px;
+        padding: 24px;
+        &__data {
+            display: grid;
+            justify-content: center;
+            border: 1px solid $pekara-blue;
+            p {
+                margin: 0;
+            }
+        }
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        &__number {
+            @include section-title-medium
+        }
+        &__type {
+            text-align: center;
+            color: $pekara-blue;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}
+
+.space-container__button {
+>>>>>>> 5101baeef8c9c4b1c2a70fdcd8b14fd12e96e90a
     color: $white--true;
     text-align: center;
     background-color: $pekara-blue;
