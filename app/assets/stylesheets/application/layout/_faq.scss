@@ -22,16 +22,18 @@
       grid-column: span 6/10;
       grid-row-gap: 16px;
   
-      @include section-title-big
+      @include section-title-big;
+
+      padding-bottom:120px;
     }
   
     &__questions{
+      width: 100% ;
       display: grid;
-      justify-content: center;
       align-items: center;
       grid-column: span 6/10;
       grid-row-gap: 16px;
-      padding: 60px 0;
+      padding-bottom: 24px;
   
     }
   }
@@ -39,7 +41,7 @@
   .question{
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr 16px;
+    // grid-template-rows: 1fr 16px;
     justify-content: center;
     align-items: center;
   
@@ -63,10 +65,10 @@
     }
   
     p{
-      @include paragraph-normal
+      @include paragraph-normal;
+
+
     }
-  
-  
   }
   
   .faq-underline{
@@ -74,4 +76,5 @@
     &--active{
       color: $pekara-blue;
     }
+    margin-top: 12px;
   }
