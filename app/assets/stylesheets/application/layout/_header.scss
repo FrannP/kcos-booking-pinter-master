@@ -66,15 +66,18 @@
 	align-items: center;
 
 	display: grid;
+	grid-row-gap: 12px;
+	
 
 	img{
-		padding-bottom: 64px;
+		// padding-bottom: 64px;
 	}
 
 	&__title{
 		color: $white--true;
 		font-size: 96px;
 		font-weight: 400;
+		line-height: normal;
 	}
 	&__paragraph{
 		color: $white--true;

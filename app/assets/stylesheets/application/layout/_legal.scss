@@ -2,6 +2,7 @@
 //LEGAL
 
 .legal{
+    grid-row-gap: 24px;
     padding: 60px 0;
     display: grid;
   
@@ -35,10 +36,18 @@
   
   .legal__title{
     display: grid;
-    justify-content: center;
     align-items: center;
     grid-column: span 6/10;
     grid-row-gap: 16px;
-  
-    @include subtitle-big
+
+    width: 100%;
+
+    color: rgba(0, 0, 0, 0.80);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: left;
+    line-height: 120%;
+    // @include subtitle-big
   }

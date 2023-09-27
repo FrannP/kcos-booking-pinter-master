@@ -15,7 +15,7 @@
   <meta property="og:title" content="<%= content_for?(:og_title) ? yield(:og_title) : AppInfo.name %>"/>
   <meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : '' %>"/>
   <meta property="og:image" content="<%= content_for?(:image) ? yield(:image) : image_url('seo.jpg') %>"/>
-
+  <link href="https://fonts.cdnfonts.com/css/source-sans-pro" rel="stylesheet">
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
