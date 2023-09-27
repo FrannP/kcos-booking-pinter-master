@@ -1,0 +1,77 @@
+
+
+//FAQS
+
+.faq{
+    padding: 120px 0 0 0;
+    display: grid;
+  
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  
+    grid-row-gap: 24px;
+  
+  
+    grid-template-columns: repeat(12, calc(100% / 12));
+  
+    &__title{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-column: span 6/10;
+      grid-row-gap: 16px;
+  
+      @include section-title-big
+    }
+  
+    &__questions{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-column: span 6/10;
+      grid-row-gap: 16px;
+      padding: 60px 0;
+  
+    }
+  }
+  
+  .question{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 16px;
+    justify-content: center;
+    align-items: center;
+  
+    &__title{
+      @include subtitle
+    }
+  
+    &__button{
+      cursor: pointer;
+  
+      background-color: $pekara-blue;
+      color: $white--true;
+      font-size: 3.5rem;
+      display: flex;
+      padding: 6px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 36px;
+      height: 36px;
+    }
+  
+    p{
+      @include paragraph-normal
+    }
+  
+  
+  }
+  
+  .faq-underline{
+  
+    &--active{
+      color: $pekara-blue;
+    }
+  }

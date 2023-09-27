@@ -1,0 +1,91 @@
+<% content_for :image, image_url(@space.featured_image.image_url(:medium))%>
+<% content_for :description, seo_description((@space.description.strip_tags.truncate(120, separator: ' '))) %>
+<% content_for :title, "Stara Pekara - " + @space.name %>
+
+
+
+  <div class="slide-container owl-carousel owl-theme carousel">
+    <% unless @space.space_images.blank? %>
+    <% @space.space_images.each do |image| %>
+    <div class="carousel__item" >
+      <div style="height: 300px;">      
+        <%= link_to image_tag(image.image), image_url(image.image), data: {lightbox: 'space', title: @space.name} %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+<div class="space-container">
+  <h1 class="space-container__title">
+    <%= @space.name %>
+  </h1>
+
+  <div class="space-description">
+    <p>
+      <%= @space.description.html_safe %></p>
+
+
+      <div class="info-container">
+        <div class="info-container__data">
+          <% if  @space.bookable %>
+            <p class="info">
+              <span class="info__number"><%= humanized_money_with_symbol(@space.book_price) %></span>
+              <span class="info__type">
+                po terminu
+              </span>
+            </p>
+          <% end %>
+        </div>
+
+        <div class="info-container__data">
+          <p class="info">
+            <span class="info__number"><%= surface(@space.surface_area) %></span>
+            <span class="info__type">
+              na raspolaganju
+            </span>
+          </p>
+        </div>
+
+        <!-- <div class="info-container__data">
+          <% if  @space.rentable %>
+            <p><span><%= humanized_money_with_symbol(@space.rent_price) %></span> mjesečno</p>
+          <% end %>
+        </div> -->
+      </div>
+
+
+
+  </div>
+
+  <div class="space-container__button">
+    <% if @space.available %>
+      <%= link_to t('space.rent_monthly', price: humanized_money_with_symbol(@space.rent_price)), new_space_rent_request_space_path(@space), class: 'section__button' if @space.rentable %>
+      <%= link_to t('space.rent_hourly', price: humanized_money_with_symbol(@space.book_price)), booking_general_space_path(@space), class: 'section__button' if @space.bookable %>
+    <% else %>
+      <%= t('space.unavailable') %>
+    <% end %>
+  </div>
+</div>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:144,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:1,
+            stagePadding: 500
+        }
+    }
+})
+</script>

@@ -1,0 +1,22 @@
+<div class="news-section">
+    <h1 class="news-section__title" ><%= t('pages_nav.posts') %></h1>
+
+    <div class="news">
+        <%= image_tag @post.image_url(:medium) %>
+
+      <div class="news-text">
+        <h2 class="news-text__title"><%= @post.title %></h2>
+        <p class="news-text__paragraph">
+          <%= @post.summary %>
+        </p>
+        <p class="news-text__paragraph">
+          <%= post_timestamp(@post.publish_at) %>
+        </p>
+
+      </div>
+    </div>
+    <div class="more-button">
+      <%= link_to t('post.see_other_posts'), posts_path, class: 'section__button' %>
+    </div>
+</div>
+

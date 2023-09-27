@@ -1,0 +1,39 @@
+<div id="kontakt" class="contact-section">
+
+  <h2 class="contact-section__title"><%= t('pages_nav.contact') %></h2>
+
+
+  <section class="contact-info">
+    <iframe class="contact-info__map contact__map--disabled-nav" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.4450981160503!2d18.694380076940362!3d45.56148717107569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7bc1bf065eb%3A0xbcadfcdf590a12e7!2sTrg%20Vatroslava%20Lisinskog%2011%2C%2031000%2C%20Osijek!5e0!3m2!1sen!2shr!4v1694861503439!5m2!1sen!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="contact-data-container">
+      
+      <div class="contact-data">
+        <h4 class="contact-data__title">Adresa</h4>
+        <p  class="contact-data__paragraph">
+          Trg Vatroslava Lisinskog 11<br>
+          31000 Osijek, Hrvatska<br>
+        </p>
+
+        
+      </div >
+        <div class="contact-data">
+          <h4 class="contact-data__title">Telefon</h4>
+          <p class="contact-data__paragraph">
+            <%= link_to '+385 (0)31 229 181', 'tel:+38531229181' %>
+          </p>
+        </div>
+      <div class="contact-data">
+        <h4 class="contact-data__title">E-mail</h4>
+        <p class="contact-data__paragraph">
+          <%= mail_to 'info@starapekara.eu', 'info@starapekara.eu' %>
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+</div>
+
+

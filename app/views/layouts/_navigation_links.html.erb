@@ -1,0 +1,49 @@
+<div class="slide-nav__section ">
+  <div class="slide-nav__text--big">
+    <%= link_to t('pages_nav.home'), root_path(anchor: 'home') %>
+
+  </div>
+  <div class="slide-nav__text--big">
+    <%= link_to t('pages_nav.about'), root_path(anchor: 'o-nama')  %>
+  </div>
+  <div class="slide-nav__text--big">
+    <%= link_to t('pages_nav.posts'), posts_path  %>
+  </div>
+  <div class="slide-nav__text--big">
+    <%= link_to t('pages_nav.spaces'), root_path(anchor: 'prostori')  %>
+  </div>
+  <div class="slide-nav__text--big">
+    <%= link_to t('pages_nav.contact'), root_path(anchor: 'kontakt')  %>
+  </div>
+</div>
+<hr>
+<div class="slide-nav__section ">
+    <div class="slide-nav__text--small">
+      <%= active_link_to 'Mailers', '/rails/mailers', class_active: 'is-active' if Rails.env.development? %>
+    </div>
+    <!-- <div class="slide-nav__text--small">      
+      <%= link_to "&#129384; Admin".html_safe, admin_root_path unless current_admin.nil? || hide_admin_hud? %>
+    </div> -->
+    <div class="slide-nav__text--small">
+      <%= active_link_to t('pages_nav.documents'), documents_path, class_active: 'is-active', active: [['documents'], []] %>
+    </div>
+    <div class="slide-nav__text--small">
+      <%= active_link_to t('pages_nav.faqs'), faqs_path, class_active: 'is-active', active: [['faqs'], []] %>
+    </div>
+
+      <% LegalPage.listed.each do |legal_page| %>
+        <div class="slide-nav__text--small">
+          <%= active_link_to legal_page.name, legal_page, class_active: 'is-active', active: :exact %>
+        </div>
+    <% end %>
+</div>
+<hr>
+<div class="slide-nav__section slide-nav__text--x-small">
+  <div>
+    © <%= Time.now.year %>. Stara Pekara
+  </div>
+  <div>
+    Sufinancirala Europska unija
+  </div>
+</div>
+

@@ -1,0 +1,27 @@
+/*------------------------------------*\
+** FOOTER
+\*------------------------------------*/
+
+// .footer {}
+
+.footer-section{
+  display: flex;
+  justify-content: center;
+
+  padding: 80px 0;
+}
+
+
+
+/*------------------------------------*\
+** COPYRIGHT
+\*------------------------------------*/
+
+.copyright {
+  background: none;
+  color: $black;
+  text-align: center;
+}
+
+
+// CREATE A STICKY FOOTER WITH FLEXBOX

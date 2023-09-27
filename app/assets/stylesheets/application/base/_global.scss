@@ -1,0 +1,71 @@
+/*------------------------------------*\
+** GLOBAL
+\*------------------------------------*/
+
+html {
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  color: $base-font-color;
+  font-size: 16px;
+}
+
+body {
+  box-sizing: border-box;
+
+  //grid i te fore
+  display: grid;
+
+  &.offset-top {
+    margin-top: 4rem;
+
+    @include breakpoint($large) {
+      margin-top: 6rem;
+    }
+  }
+}
+
+hr{
+  color: $white--true;
+  width: 100%;
+
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  min-height: calc(100vh - 70px);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+h2{
+  color: $pekara-blue;
+  text-align: center;
+}
+
+
+h1{
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+

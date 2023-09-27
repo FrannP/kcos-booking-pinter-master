@@ -1,0 +1,20 @@
+<div id="posts" class="posts-wrapper">
+  <% posts.each do |post| %>
+  <div class="news">
+
+    <%= image_tag post.image_url(:medium) %>
+
+      <div class="news-text">
+        <%= link_to post_path(post) do %>
+          <h2 class="news-text__title"><%= post.title %></h2>
+        <% end %>
+        <p class="news-text__paragraph">
+          <%= post.summary %>
+        </p>
+        <%= post_timestamp(post.publish_at) %>
+      </div>
+  </div>
+
+  <% end %>
+  <%= paginate posts, remote: true %>
+</div>

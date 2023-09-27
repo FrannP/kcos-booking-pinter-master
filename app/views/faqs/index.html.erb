@@ -1,0 +1,22 @@
+<div class="faq">
+  <h1 class="faq__title"><%= t('pages_nav.faqs') %></h1>
+
+  <ul class="faq__questions accordion" >
+      <% @faqs.each_with_index do |faq, index| %>
+
+      <li class="accordion__item">
+        <div class="question">
+          <h4 class="question__title"><%= faq.question %></h4>
+          <div class="js-accordion__head question__button">
+              +
+          </div>
+        </div>
+
+        <p class="js-accordion__body"><%= faq.answer %></p>
+        <hr class="faq-underline">
+      </li>
+
+      <% end %>
+  </div>  
+</div>
+
