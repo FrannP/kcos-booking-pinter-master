@@ -3,12 +3,11 @@
 \*------------------------------------*/
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url('path/to/source-sans-pro-regular.otf') format('otf');
+  font-family: "Source Sans Pro";
+  src: url("path/to/source-sans-pro-regular.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
-
 
 html {
   font-family: $base-font-family;
@@ -32,13 +31,12 @@ body {
   }
 }
 
-hr{
+hr {
   color: $white--true;
   width: 100%;
-
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -55,28 +53,16 @@ main {
   margin: 0;
 }
 
-
-
-h2{
+h2 {
   color: $pekara-blue;
   text-align: center;
 }
 
-
-h1{
+h1 {
   margin: 0;
 }
 
-p{
-  font-family: 'Source Sans Pro', sans-serif;
+p {
+  font-family: "Source Sans Pro", sans-serif;
   margin-bottom: 0px;
 }
-
-
-
-
-
-
-
-
-

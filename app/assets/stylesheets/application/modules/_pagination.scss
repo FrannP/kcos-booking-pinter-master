@@ -1,29 +1,28 @@
 .pagination {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-top: 3*$gutter;
-	margin-bottom: 3*$gutter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3 * $gutter;
+  margin-bottom: 3 * $gutter;
 
-  font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 23px;
-    letter-spacing: 0em;
-    text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: center;
 
-    font-family: Source Sans Pro;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: center;
-
+  font-family: Source Sans Pro;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 .pagination > .page {
-  margin-left: 1/4*$gutter;
-  margin-right: 1/4*$gutter;
+  margin-left: 1/4 * $gutter;
+  margin-right: 1/4 * $gutter;
   width: 2rem;
   height: 2rem;
   display: flex;
@@ -49,8 +48,8 @@
 
 .pagination > .next,
 .pagination > .prev {
-  margin-left: 1/4*$gutter;
-  margin-right: 1/4*$gutter;
+  margin-left: 1/4 * $gutter;
+  margin-right: 1/4 * $gutter;
 
   & > a {
     text-decoration: none;
@@ -64,8 +63,8 @@
 
 .pagination > .first,
 .pagination > .last {
-  margin-left: 1/4*$gutter;
-  margin-right: 1/4*$gutter;
+  margin-left: 1/4 * $gutter;
+  margin-right: 1/4 * $gutter;
 
   & > a {
     text-decoration: none;

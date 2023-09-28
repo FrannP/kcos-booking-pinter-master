@@ -27,14 +27,12 @@
 //   }
 // }
 
-
 // .accordion__arrow {
 //   position: absolute;
 //   right: 0;
 //   top: 0.5rem;
 //   display: inline-block;
 //   transform: translate( -16px , 0 );
-
 
 //   &:before, &:after {
 //     content: "";
@@ -69,14 +67,9 @@
 //   border-bottom: none;
 // }
 
-
-
-
-
 .accordion__item {
-    margin-bottom: 2rem;
-    position: relative;
-  
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 .js-accordion__head {
@@ -86,7 +79,6 @@
   align-items: center;
   padding: 10px;
 }
-
 
 .faq-underline {
   height: 1px;
@@ -105,4 +97,3 @@
   padding: 10px;
   background-color: #ffffff;
 }
-
