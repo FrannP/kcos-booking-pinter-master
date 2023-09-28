@@ -4,6 +4,7 @@
 
 <style>
 
+
 .owl-nav{
   display: none;
 }
@@ -11,6 +12,8 @@
   .owl-item.active.center {
      /* -webkit-transform: scale(1.8);
      transform: scale(1.8); */
+
+    
 
      transform: scale(1.8, 1.25);
      z-index: 500;
@@ -24,17 +27,26 @@
  .owl-carousel .owl-item img {
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
 }
+
+.container{
+    width: 99.19vw;
+    /* padding: 0 40px 0 40px; */
+    overflow: hidden;
+}
  </style>
 
-<div class="slide-container owl-theme owl-carousel carousel">
-  <% unless @space.space_images.blank? %>
-  <% @space.space_images.each do |image| %>
-  <div class="item">
-    <%= link_to image_tag(image.image), image_url(image.image), data: {lightbox: 'space', title: @space.name} %>
+<div class="container">
+  <div class="slide-container owl-theme owl-carousel carousel">
+    <% unless @space.space_images.blank? %>
+    <% @space.space_images.each do |image| %>
+    <div class="item">
+      <%= link_to image_tag(image.image), image_url(image.image), data: {lightbox: 'space', title: @space.name} %>
+    </div>
+    <% end %>
+    <% end %>
   </div>
-  <% end %>
-  <% end %>
 </div>
+
 
 
 
@@ -112,7 +124,6 @@
 
   $('.owl-carousel').owlCarousel({
       loop:true,
-      margin:10,
       center: true,
       dots: false,
       responsiveClass:true,
