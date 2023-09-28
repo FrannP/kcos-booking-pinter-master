@@ -8,7 +8,7 @@
     <% unless @space.space_images.blank? %>
     <% @space.space_images.each do |image| %>
     <div class="carousel__item" >
-      <div style="height: 300px;">      
+      <div style="height: 100%;">      
         <%= link_to image_tag(image.image), image_url(image.image), data: {lightbox: 'space', title: @space.name} %>
       </div>
     </div>
@@ -24,9 +24,22 @@
   </h1>
 
   <div class="space-description">
-    <p>
-      <%= @space.description.html_safe %></p>
+    <!-- <p>
+      <%= @space.description.html_safe %>
+    </p> -->
 
+
+    <p>
+      I'm Brian, and so's my wife! The Lady of the Lake, her arm clad in the purest shimmering samite held aloft Excalibur from the bosom of the water, signifying by divine providence that I, Arthur, was to carry Excalibur. THAT is why I am your king. I don't want to talk to you no more, you empty-headed animal food trough wiper! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Are you suggesting coconuts migrate?
+    </p>
+
+    <p>
+      Come and see the violence inherent in the system. Help! Help! I'm being repressed! What is the capital of Assyria? Oh, king eh? Very nice. And how'd you get that, eh? By exploiting the workers. By hanging on to outdated imperialist dogma which perpetuates the economic and social differences in our society.
+    </p>
+
+    <p>
+      Oh, oh, I see! Running away, eh? You yellow bastards! Come back here and take what's coming to you! I'll bite your legs off! Listen, strange women lyin' in ponds distributin' swords is no basis for a system of government. Supreme executive power derives from a mandate from the masses, not from some farcical aquatic ceremony.
+    </p>
 
       <div class="info-container">
         <div class="info-container__data">
@@ -60,7 +73,7 @@
 
   </div>
 
-  <div class="space-container__button">
+  <!-- <div class="space-container__button">
     <% if @space.available %>
       <%= link_to t('space.rent_monthly', price: humanized_money_with_symbol(@space.rent_price)), new_space_rent_request_space_path(@space), class: 'section__button' if @space.rentable %>
       <%= link_to t('space.rent_hourly', price: humanized_money_with_symbol(@space.book_price)), booking_general_space_path(@space), class: 'section__button' if @space.bookable %>
@@ -68,10 +81,16 @@
       <%= t('space.unavailable') %>
     <% end %>
   </div>
+</div> -->
+
+  <div class=" space-container__button">
+      <p class="section__button">iznajmi prostor</p>
+  </div>
 </div>
 
 <script>
 $('.owl-carousel').owlCarousel({
+    dots: false,
     loop:true,
     margin:144,
     nav:false,

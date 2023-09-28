@@ -137,10 +137,16 @@
       justify-content: center;
       align-items: center;
       grid-column: span 6/10;
-      grid-row-gap: 16px;
+      grid-row-gap: 24px;
   
       p{
         margin: 0;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
       }
     }
   
@@ -150,7 +156,10 @@
       grid-column-gap: 24px;
       padding: 24px;
       &__data{
+        height: 131px;
+        width: 440px;
         display: grid;
+        align-items: center;
         justify-content: center;
   
         border: 1px solid $pekara-blue;
@@ -163,7 +172,7 @@
     .info{
       display: flex;
       flex-direction: column;
-      padding: 24px;
+      // padding: 24px;
       &__number{
         @include section-title-medium
       }
@@ -179,13 +188,14 @@
   
   
   .space-container__button{
+    cursor: pointer;
     color: $white--true;
     text-align: center;
     background-color: $pekara-blue;
     padding: 12px 24px;
   
   
-    width: 75%;
+    // width: 75%;
   
     font-size: 24px;
     font-weight: 700;

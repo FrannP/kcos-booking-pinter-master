@@ -4,6 +4,21 @@
 	justify-content: center;
 	margin-top: 3*$gutter;
 	margin-bottom: 3*$gutter;
+
+  font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    font-family: Source Sans Pro;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+
 }
 
 .pagination > .page {
@@ -26,8 +41,9 @@
 
   &.current {
     border-radius: 50%;
-    background: $color-primary;
-    color: $white;
+    // background: $color-primary;
+    // color: $white;
+    color: $pekara-blue;
   }
 }
 
