@@ -25,6 +25,7 @@
   }
 
   &__questions {
+    
     width: 100%;
     display: grid;
     align-items: center;
@@ -43,6 +44,12 @@
 
   &__title {
     @include subtitle;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
   &__button {
@@ -62,6 +69,13 @@
 
   p {
     @include paragraph-normal;
+
+    color: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
   }
 }
 

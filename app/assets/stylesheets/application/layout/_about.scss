@@ -108,10 +108,13 @@
   cursor: pointer;
 }
 .image-number {
+  color: #FFF;
   text-align: center;
-  font-size: 96px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 72px;
+  font-style: normal;
   font-weight: 400;
-  color: $white--true;
+  line-height: normal;
 
   position: absolute;
 
