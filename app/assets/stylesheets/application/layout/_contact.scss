@@ -16,11 +16,11 @@
   display: grid;
   grid-template-columns: repeat(12, calc(100% / 12));
 
-  grid-column-gap: 24px;
+  // grid-column-gap: 24px;
   &__map {
     width: 100%;
     height: 360px;
-    grid-column: span 4/7;
+    grid-column: span 4/8;
   }
 }
 
@@ -32,6 +32,8 @@
 }
 
 .contact-data {
+  padding-left: 24px;
+
   &__title {
     margin-bottom: 0;
 
