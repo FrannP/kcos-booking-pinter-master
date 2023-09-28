@@ -58,42 +58,40 @@ $(document).ready(function () {
       // $('.nav-button').toggleClass('nav-button--active')
       $('.nav-button__svg').toggleClass('nav-button__svg--active')
 
+
+      var originalPosition = true;
+
+      if($('.nav-button').hasClass('.nav-button--extended')){
+        $('.nav-button').animate({ right: '0px' },"300ms", 'easeOutCubic', function () {});
+        $('.nav-button').removeClass('.nav-button--extended')
+
+      } else {
+        $('.nav-button').animate({ right: '342px' },"300ms", 'easeOutCubic', function () {});
+      }
+      originalPosition = !originalPosition; 
   });
 });
+
+
+
 
 $(document).ready(function () {
 
   var originalPosition = true;
 
   $('.nav-button').click(function () {
-      if (originalPosition) {
+    $('.nav-button').toggleClass('.nav-button--extended')
+
+      if ($('.nav-button').hasClass('.nav-button--extended')) {
           $(this).animate({ right: '342px' },"300ms", 'easeOutCubic', function () {});
+
       } else {
           $(this).animate({ right: '0px' },"300ms", 'easeOutCubic', function () {});
+          $(this).removeClass('.nav-button--extended')
+
       }
       
       originalPosition = !originalPosition; 
-  });
-});
-
-
-$(document).ready(function() {
-  // Select the arrow element by its ID
-  var $navButton = $(".nav-button");
-
-  // Select the button by its ID
-  var $link = $("#slide-nav__link");
-
-  // Add a click event handler to the button
-  $link.click(function() {
-    // Toggle the arrow's position
-    if ($navButton.css("right") === "0px") {
-      // Move the arrow off-screen
-      $navButton.css("right", "-50px");
-    } else {
-      // Move the arrow back on-screen
-      $navButton.css("right", "0");
-    }
   });
 });
 
