@@ -18,6 +18,13 @@
   line-height: 30px;
   letter-spacing: 0em;
   text-align: center;
+
+  *{font-family: 'Source Sans Pro' sans-serif;}
+
+
+  span{
+    font-family: 'Source Sans Pro' sans-serif;
+  }
 }
 
 .pagination > .page {
@@ -32,6 +39,7 @@
   & > a {
     text-decoration: none;
     color: $black;
+
 
     &:hover {
       color: $color-secondary;
